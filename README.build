@@ -1,0 +1,27 @@
+The following are instructions on how to build the documentation.
+
+Platform:
+	The canonical build platform is CentOS 5.x.  You are welcome
+	to submit patches to allow the docs to build on other platforms,
+	as long as you don't break the primary build.
+
+Required Tools:
+	GNU make
+	docbook2html	(CentOS package docbook-utils)
+	docbook2pdf	(CentOS package docbook-utils-pdf)
+	latex2html
+
+Preparation:
+
+	Create the file etc/constpriv.mk.  See the comments in etc/const.mk
+	for details.
+
+Procedure:
+
+	To build the documents, type:
+	   make
+	This will create a 'gen' subdirectory with all the documentation
+	in it.
+
+	On the official build server only, to install the documents, type:
+	   make install

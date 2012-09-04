@@ -1,0 +1,29 @@
+This is the documentation for GNO/ME (the GNO Multitasking Environment),
+a UNIX-like environment for the Apple IIgs.  See <http://www.gno.org/gno>.
+
+This documentation, which uses modern documentation frameworks, is not
+built on an Apple IIgs due to the non-availability of those frameworks
+on the IIgs, and the related computational power and memory requirements
+for running those frameworks.
+
+The canonical location for the sources you see here is the master git
+repository at <https://github.com/GnoConsortium/gno-docs>.
+
+If you are looking for man page sources, they are kept in the main
+GNO/ME repository at <https://github.com/GnoConsortium/gno>.
+
+Manifest:
+
+README		- This file.
+README.build	- Detailed build instructions.
+
+
+
+
+
+
+Questions or concerns should be discussed on the gno-devel mailing
+list at <https://lists.gno.org/mailman/listinfo/gno-devel>.
+
+Devin Reade
+gdr@gno.org
