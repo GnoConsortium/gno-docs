@@ -10,3 +10,6 @@ include $(SRCROOT)/etc/const.mk
 -include $(SRCROOT)/etc/const-local.mk
 
 include $(SRCROOT)/etc/rules.mk
+
+clobber::
+	/bin/rm -rf $(OUTPUT_DIR)
