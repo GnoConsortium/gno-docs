@@ -5,16 +5,28 @@ Platform:
 	to submit patches to allow the docs to build on other platforms,
 	as long as you don't break the primary build.
 
+	It has also been verified to build on the following platforms:
+	       CentOS 5.8
+	       RHEL 6.3
+
 Required Tools:
+	The following tool sets are available on the official build
+	platform as part of the base distribution (that is, you can
+	use yum(8) to install them).
+
 	GNU make
 	docbook2html	(CentOS package docbook-utils)
 	docbook2pdf	(CentOS package docbook-utils-pdf)
+	latex
+	dvips
+	dvipdfm
 	latex2html
 
 Preparation:
 
-	Create the file etc/constpriv.mk.  See the comments in etc/const.mk
-	for details.
+	Create the file etc/const-priv.mk.  See the comments in etc/const.mk
+	for details. If you would like to override values set in const.mk,
+	then create the file etc/const-local.mk.
 
 Procedure:
 
@@ -25,3 +37,10 @@ Procedure:
 
 	On the official build server only, to install the documents, type:
 	   make install
+
+	You can clean up temporary files without affecting the built
+	documents by doing a:
+	   make clean
+
+	You can do a complete cleanup, including built documents, via:
+	   make clobber

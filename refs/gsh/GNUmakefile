@@ -1,23 +1,19 @@
 #
-# GNO Shell
+# GNO Shell Reference Manual
 #
 SRCROOT 	= ../..
 WEB_HOME_BASE	= refs/gsh
 SUBPROJECTS	= 
 
-include $(SRCROOT)/etc/constpriv.mk
+DOCBOOK_SRC_BASENAME	= gsh
+DOCBOOK_SRCS		= $(shell /bin/ls -1 *.docbook)
+
+include $(SRCROOT)/etc/const-priv.mk
 include $(SRCROOT)/etc/const.mk
-
-WEB_HOME	= $(DOCROOT_INSECURE)/$(WEB_HOME_BASE)
-HEAD_PAGE	= 
-TAIL_PAGE	= 
-TARGETS		= buildDocbookHtml buildDocbookPdf
-DOCBOOK_TOP	= gsh.docbook
-
-default: build
-
-clean::
-	/bin/rm -rf $(WEB_HOME)/html
+include $(SRCROOT)/etc/const-docbook.mk
+-include $(SRCROOT)/etc/const-local.mk
 
 include $(SRCROOT)/etc/rules.mk
-include $(SRCROOT)/etc/tailcat.mk
+include $(SRCROOT)/etc/rules-docbook.mk
+
+buildLocal:: docbookBuild

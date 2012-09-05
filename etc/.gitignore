@@ -1,1 +1,2 @@
-constpriv.mk
+const-priv.mk
+const-local.mk

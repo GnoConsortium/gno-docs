@@ -30,7 +30,7 @@
 -->
 
 
-<book>
+<book id="gsh" lang="en">
 
 <bookinfo>
 <title>GNO Shell Users' Manual</title>

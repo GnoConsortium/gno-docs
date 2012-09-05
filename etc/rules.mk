@@ -2,19 +2,7 @@
 # $Id: rules.mk,v 1.1 2012/08/26 02:27:36 gdr Exp $
 #
 
-$(WEB_HOME)/%.gif: %.gif
-	install -m644 $< $@
-
-$(WEB_HOME)/%.png: %.png
-	install -m644 $< $@
-
-$(WEB_HOME)/%.pdf: %.pdf
-	install -m644 $< $@
-
-$(WEB_HOME)/%.txt: %.txt
-	install -m644 $< $@
-
-build:	buildLocal webHome $(TARGETS) webHomePerms $(BUILD_FILES)
+build:	buildLocal $(TARGETS) webHomePerms $(BUILD_FILES)
 	@for s in X $(SUBPROJECTS); do \
 		[ "$$s" = X ] && continue; \
 		[ -d "$$s" ] || continue; \
@@ -23,8 +11,7 @@ build:	buildLocal webHome $(TARGETS) webHomePerms $(BUILD_FILES)
 
 # You can define additional rules for buildLocal if the default build
 # rule is insufficient.
-buildLocal::
-	@true
+buildLocal:: webHome
 
 webHome:
 	@if [ -z "$(WEB_HOME)" ]; then \
@@ -52,7 +39,7 @@ install::
 	find $(TARGET_DIR) -type f \! -perm 0644 -exec chmod 644 {} \;
 
 clean::
-	rm -f *~
+	/bin/rm -f *~
 	@for s in X $(SUBPROJECTS); do \
 		[ "$$s" = X ] && continue; \
 		[ -d "$$s" ] || continue; \
@@ -60,20 +47,16 @@ clean::
 	done
 
 clobber:: clean
+	/bin/rm -rf $(WEB_HOME)
 
-buildDocbookHtml:: clean
-	@if [ -z "$(DOCBOOK_TOP)" ]; then \
-	  echo "DOCBOOK_TOP is not set"; \
-	  exit 1; \
-	fi
-	@htmldir="$(WEB_HOME)/html"; \
-	[ -d $$htmldir ] || mkdir -p $$htmldir; \
-	echo docbook2html  -o $$htmldir $(DOCBOOK_TOP); \
-	docbook2html  -o $$htmldir $(DOCBOOK_TOP)
-#	-cp -p *.png $(HTML_DIR)
+$(WEB_HOME)/%.gif: %.gif
+	install -m644 $< $@
 
-buildDocbookPdf::
-	@[ -d $(WEB_HOME) ] || mkdir -p $(WEB_HOME)
-	@date
-	docbook2pdf -o $(WEB_HOME) $(DOCBOOK_TOP)
-	@date
+$(WEB_HOME)/%.png: %.png
+	install -m644 $< $@
+
+$(WEB_HOME)/%.pdf: %.pdf
+	install -m644 $< $@
+
+$(WEB_HOME)/%.txt: %.txt
+	install -m644 $< $@
