@@ -24,7 +24,7 @@ tex_pdf_ltr:	webHome $(TEX_PDF_LTR)
 tex_pdf_a4:	webHome $(TEX_PDF_A4)
 
 clean::
-	/bin/rm -f $(TEX_GARBAGE)
+	/bin/rm -f $(TEX_GARBAGE) $(BIBTEX_GARBAGE)
 
 $(WEB_HOME)/%.ltr.ps: %.dvi
 	$(DVIPS) -tletter $(DVIPS_FLAGS) -o $@ $<

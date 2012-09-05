@@ -3,7 +3,7 @@
 #
 SRCROOT		= ..
 WEB_HOME_BASE	= refs
-SUBPROJECTS	= kernel gsh
+SUBPROJECTS	= intro kernel gsh
 
 include $(SRCROOT)/etc/const-priv.mk
 include $(SRCROOT)/etc/const.mk

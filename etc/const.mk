@@ -83,6 +83,8 @@ TEX_GARBAGE	= \
 	$(TEX_SRC_BASENAME).out \
 	$(TEX_SRC_BASENAME).dvi
 
+BIBTEX_GARBAGE	= $(TEX_SRC_BASENAME).bbl $(TEX_SRC_BASENAME).blg
+
 # Various latex-related paths
 DVIPS		= dvips
 DVIPDF		= dvipdfm
