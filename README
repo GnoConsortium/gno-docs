@@ -21,6 +21,7 @@ etc		- These are configuration files for the document build.
 refs/intro	- Introduction and Installation Manual
 refs/kernel	- GNO Kernel Reference Manual
 refs/gsh	- GNO Shell Reference Manual
+refs.aug96	- Legacy GNO v2.0.4 reference manuals.
 
 Questions or concerns should be discussed on the gno-devel mailing
 list at <https://lists.gno.org/mailman/listinfo/gno-devel>.
