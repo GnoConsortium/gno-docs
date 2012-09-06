@@ -63,5 +63,11 @@ BUILD_FILES		= GNUmakefile $(HEAD_PAGE) $(TAIL_PAGE) \
 			  $(SRCROOT)/etc/rules.mk \
 			  $(SRCROOT)/etc/tailcat.mk
 
+# If you set this to "no" then there will be no attempt to do a final
+# fix-up of permissions to make files 0644 and directories 0755.  If
+# you disable it in the local makefile, then ensure that you are setting
+# appropriate permissions locally.
+FIX_WEB_HOME_PERMS	= yes
+
 # This is where the files will eventually wind up.
 TARGET_DIR		= $(GNO_PUBLIC_HTML)/$(WEB_HOME_BASE)

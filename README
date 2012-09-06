@@ -18,6 +18,7 @@ README		- This file.
 README.build	- Detailed build instructions.
 etc		- These are configuration files for the document build.
 		  See README.build for details.
+*.html		- Top level web pages
 refs/intro	- Introduction and Installation Manual
 refs/kernel	- GNO Kernel Reference Manual
 refs/gsh	- GNO Shell Reference Manual
