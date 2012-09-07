@@ -35,14 +35,8 @@ include $(SRCROOT)/etc/rules.mk
 
 buildLocal:: manBuild
 
-# We do a straight copy on these ones.
-#$(WEB_HOME)/%.html: %.html
-#	install -m644 $< $@
-
-manBuild: manSetup
+manBuild:
 	@GNOROOT="$(GNO_SOURCE)" MANHTML="$(WEB_HOME)" NAME="$(NAME)" \
 	ADDR="$(ADDRESS)" MKSO="$(MKSO)" \
 	./mkhtmlman
 # HTMLROOT="$(HTML_ROOT)" 
-
-manSetup:

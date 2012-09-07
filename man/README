@@ -1,0 +1,9 @@
+The man2html script included here is the original one used for 
+this purpose from the late 1990's.  As of September 2012, it's
+home is at:
+	http://dcssrv1.oit.uci.edu/indiv/ehood/man2html.html
+
+If you can't find it at the above link, do a websearch for man2html
+by Earl Hood.  (The version that currently ships with RHEL6 is a
+different and incompatible implementation.)
+
