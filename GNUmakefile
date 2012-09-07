@@ -9,6 +9,7 @@ DYNAMIC_TARGETS	= $(WEB_HOME)/head.html \
 		  $(WEB_HOME)/tail.html \
 		  $(WEB_HOME)/index.html \
 		  $(WEB_HOME)/refs.html \
+		  $(WEB_HOME)/manindex.html \
 		  $(WEB_HOME)/oldnews.html
 
 STATIC_TARGETS	= 
