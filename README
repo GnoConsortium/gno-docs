@@ -19,6 +19,9 @@ README.build	- Detailed build instructions.
 etc		- These are configuration files for the document build.
 		  See README.build for details.
 *.html		- Top level web pages
+man		- Man Pages; the files in this directory are used
+		  for generating an HTML version of the manual pages
+		  that are installed under GNO proper.
 refs/intro	- Introduction and Installation Manual
 refs/kernel	- GNO Kernel Reference Manual
 refs/gsh	- GNO Shell Reference Manual

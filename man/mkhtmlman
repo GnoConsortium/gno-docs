@@ -1,0 +1,93 @@
+#! /bin/sh
+#
+# Devin Reade, November 1997.
+#
+# $Id: mkhtmlman,v 1.9 1999/02/21 23:37:13 gdr-ftp Exp $
+
+man2html=./man2html
+TMPDIR=${TMPDIR:-/tmp}
+
+#
+# Make sure we know where everything is going.
+#
+if [ -z "$GNOROOT" ]; then
+    # This is where the main GNO source tree is located
+    echo "GNOROOT variable not set"
+    exit 1
+fi
+if [ -z "$MANHTML" ]; then
+	echo "MANHTML variable not set"
+	exit 1
+fi
+if [ -z "$NAME" ]; then
+	echo "NAME variable not set"
+	exit 1
+fi
+if [ -z "$ADDR" ]; then
+	echo "ADDR variable not set"
+	exit 1
+fi
+#if [ ! -x ./newer ]; then
+#	echo "./newer does not exist"
+#	exit 1
+#fi
+set +e
+
+listfile=$TMPDIR/mkhtmlman.1.$$
+
+trap "rm -f $listfile" 0 1 2 15 
+
+MANDIRS="$GNOROOT/usr.man $GNOROOT/*bin* $GNOROOT/*lib*"
+
+for section in 1 2 3 4 5 6 7 8; do
+    dest=$MANHTML/man$section
+    [ -d $dest ] || mkdir -p $dest
+
+    for F in 00.DUMMY `find $MANDIRS -type f -name '*.'$section -print \
+	| grep -v .AppleDouble \
+	| grep -v .finderinfo \
+	| grep -v .resource \
+	| grep -v libcurses/PSD.doc \
+	| grep -v bin/gsh/updates1.1 \
+	| grep -v sed/tests` ; do
+	[ "$F" = 00.DUMMY ] && continue;
+	if egrep -q -e '^'"$F"'$' ignored.pages; then
+#	    echo "$F: ignored"
+	    continue
+	fi
+	F_noG="$F"
+	if [ -f $F'G' ]; then
+	    F="$F"G
+	fi
+	macro=''
+	if ! egrep -q -e '^\.TH.*GNO' $F; then
+	    if egrep -q -e '^\.Sh NAME' $F; then
+		echo "$F: Using the BSD-formatted man page."
+		macro=doc
+	    else
+		echo "$F: This does not appear to be a GNO manual page." \
+		    "Skipped."
+		continue
+	    fi
+	fi
+	f=`basename $F_noG`
+	f2=`echo $f | perl -pe 's/\.[^\.]+$//;'`
+	echo "$f" >> $listfile
+	if [ ! $dest/$f.html -nt $F ]; then
+	    echo "creating $dest/$f.html"
+#	    nroff -man$macro $F | col -b > $dest/$f.txt
+	    nroff -man$macro $F | $man2html -nodepage | \
+	    perl -p -e \
+    's/<BODY>/<title>GNO: '"$f2($section)"'<\/title><body bgcolor=\#ffffff textcolor=\#000000 linkcolor=\#0000FF vlinkcolor=\#001177 alinkcolor=\#001177>/;'\
+		> $dest/$f.html
+	    chmod 0644 $dest/$f.html
+	fi
+    done
+    echo "creating $dest/00.index.html"
+    sort $listfile | \
+	./mkmandex -s$section -name="$NAME" -addr="$ADDR" -mkso="$MKSO" \
+		-hroot="../.." > $dest/00.index.html
+    chmod 0644 $dest/00.index.html
+    rm $listfile
+done
+

@@ -21,6 +21,7 @@ Required Tools:
 	dvips
 	dvipdfm
 	latex2html
+	man2html
 
 Preparation:
 

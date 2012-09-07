@@ -1,0 +1,25 @@
+# These are files for which we will _not_ generate html man pages.
+# It is critical that there be no whitespace either preceeding nor
+# following these file names.
+#
+# $Id: ignored.pages,v 1.2 1998/06/12 14:47:30 gdr-ftp Exp $
+#
+00.DUMMY
+../../gno/usr.bin/awk/tests/addr.1
+../../gno/usr.bin/awk/tests/out/out.1.2
+../../gno/usr.bin/awk/tests/out/out.1.4
+../../gno/usr.bin/awk/tests/out/out.2.1
+../../gno/usr.bin/awk/tests/out/out.2.2
+../../gno/usr.bin/awk/tests/out/out.2.3
+../../gno/usr.bin/awk/tests/out/out.2.4
+../../gno/usr.bin/awk/tests/out/out.3.1
+../../gno/usr.bin/awk/tests/out/out.8.1
+../../gno/usr.bin/dirname/dirname.1
+../../gno/sbin/reboot/boot.hp300.8
+../../gno/sbin/reboot/boot.i386.8
+../../gno/sbin/reboot/boot.sparc.8
+../../gno/sbin/reboot/boot.tahoe.8
+../../gno/sbin/reboot/boot.vax.8
+../../gno/usr.man/man3/getcap.3
+../../gno/usr.sbin/cron/cron.8
+../../gno/usr.sbin/inetd/inetd.8
