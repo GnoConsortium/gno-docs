@@ -1,0 +1,60 @@
+push(@local_yearmap, "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+     "Jul", "Aug", "Sep", "Oct", "Nov", "Dec");
+
+$local_version = '';
+$local_date = '';
+$local_http = '';
+
+$local_approval_header_file = '/home/gdr/etc/GNO-FAQ.approval';
+
+sub local_approval {
+    open(local_fp, "< $local_approval_header_file") ||
+	die("couldn't open $local_approval_header_file.  Are you supposed " .
+	    "to be trying to post this FAQ?");
+    $approval_line = <local_fp>;
+    chop($approval_line);
+    close(local_fp);
+    return $approval_line;
+}
+
+sub local_hdr_parse_rcs {
+    local($src, $year, $day, $time, $month);
+    
+#    $src = "\@articledir\@/FAQ.gno.src";
+    $src = "/home/gdr/src/doc/FAQs/FAQ.gno.src";
+    open (local_fp, "$src") || die("couldn't open $src");
+    while ($_ = <local_fp>) {
+	if (m,\$Id:\s+\S+\s+(\S+)\s+(\d+)/(\d+)/(\d+)\s+(\S+)\s*,) {
+	    $local_version = $1;
+	    $year = $2;
+	    $day = $4;
+	    $time = $5;
+	    $month = $local_yearmap[int($3)-1];
+	    $local_date = "$day $month $year $time";
+	} elsif (/%FAQ-http-addr%([^%]+)%/) {
+	    $local_http = $1;
+	}
+    }
+    close(local_fp);
+}
+
+sub local_hdr_version {
+    ($local_version eq '') && &local_hdr_parse_rcs();
+    &pr_header("Version", "$local_version");
+}
+
+sub local_hdr_subject {
+    ($local_version eq '') && &local_hdr_parse_rcs();
+    &pr_header("Subject", "comp.sys.apple2.gno FAQ (v$local_version)");
+}
+
+sub local_hdr_last_modified {
+    ($local_date eq '') && &local_hdr_parse_rcs();
+    &pr_header("Last-modified", "$local_date");
+}
+
+sub local_hdr_url {
+    &pr_header("URL", "$local_http");
+}
+
+1;

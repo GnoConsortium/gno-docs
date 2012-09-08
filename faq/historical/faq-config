@@ -1,0 +1,46 @@
+#!/bin/false
+#
+#	Configuration for auto-faq
+#
+#	Current newsgroups covered by this file:
+#	   rec.radio.amateur.misc (cross-posted to news.answers)
+#	   rec.radio.cb (cross-posted to news.answers)
+#
+
+# global parameters
+articledir="/home/gdr/src/doc/FAQs"	# default directory for FAQ
+chgctrl-type="rcs"		# using RCS for revision control
+newstech="gdr"		# technical lead for FAQ postings
+from="newstech"			# From: field default is news-tech user
+techname="Devin Reade"		# full name of technical lead
+testgroup="edm.test"		# newsgroup for tests
+testdistrib="ab"		# distribution for tests
+organization="Myrias Computer Technologies Corp"
+localdomain="eddore.myrias.com"	# local internet domain name
+timezone="MST7MDT"		# local timezone
+
+local-func-src="/home/gdr/src/doc/FAQs/faq.funcs" # customization routines
+
+=== GNO-faq
+articlebase="gnoFAQ"		# basename for FAQ
+statusbase="gnoFAQ.status"	# sequence file for Supersedes: headers
+owner="gdr@eddore.myrias.com"	# owner of FAQ text file
+ownername="Devin Reade"		# full name of owner
+newsgroup="comp.sys.apple2.gno"	# primary newsgroup for FAQ postings
+extragroups="comp.answers,news.answers"
+				# secondary newsgroup(s) for cross-posting
+				# extragroups may be left empty
+test-2nd-hdrs="Archive-Name:Revision:Changes:Last-modified:Version:URL"
+post-2nd-hdrs="Archive-Name:Revision:Changes:Last-modified:Version:URL"
+faqid="apple2-gno-faq"		# identifier for message ID & archive name
+archive="apple2/GNO-faq"	# override archive name
+distribution="world"		# normal FAQ posting distribution
+approval="@local_approval(A)@"	# news.answers approval (optional)
+interval="35"			# how many days before the message expires
+Keywords: FAQ, GNO, Apple-II, UNIX, ORCA
+Summary: Contains information on the UNIX-like OS for the Apple IIgs.
+Posting-Frequency:: monthly
+X-Content-Currency: This FAQ changes regularly.  When a saved or printed copy\
+   is over 6 months old, please obtain a new one.  Instructions in the\
+   preamble indicate where to find them via NetNews, FTP, and the WWW.
+

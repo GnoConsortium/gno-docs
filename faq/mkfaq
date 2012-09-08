@@ -1,0 +1,391 @@
+#! /usr/bin/perl
+
+#
+# This script is used for formatting the GNO FAQ.
+#
+# $Id: mkfaq,v 1.10 1998/01/22 14:53:10 gdr Exp $
+#
+
+$src = "FAQ.gno.src";		# the name of the FAQ source file
+$dest = "csa2g.FAQ.txt";	# the name of the text output file
+$html = "csa2g.FAQ.html";	# the name of the html output file
+
+$ContactName = "Devin Reade";
+$ContactEmail = "gdr\@eddore.myrias.com";
+
+$totalSections = 0;		# the number of sections in the FAQ
+$totalQuestions = 0;
+$currentQuestion = 0;
+$tocLines = 0;			# number of lines in table of contents
+$lastmapping = 0;		# used in &map()
+
+$SectionNumber = 0;		# number of the current section
+$MaxSections   = 0;		# total number of sections
+
+#
+# open the output files
+#
+open (outfp,  "> $dest") || die("couldn't open output file $dest");
+open (outfp2, "> $html") || die("couldn't open output file $html");
+
+$faq = "GNO Frequently Asked Questions (FAQ) List";
+
+printf(outfp2
+       "<html>\n" .
+       "<head>\n" .
+       "<title>" . $faq . "</title>\n" .
+       "</head>\n" . 
+       "<body bgcolor=\"#ffffff\">\n" .
+       "<h1>" . $faq . "</h1>\n");
+#
+# First pass -- get the table of contents and figure out what the 
+#               question number mappings are.
+#
+open (fp, $src) || die("couldn't open $src (1)");
+$_ = <fp>;
+do {
+    chop;
+    if ( /^%Section%\s*(.+):/ ) {
+	&addSection($1);
+	&addSectionHTML($1);
+    } elsif ( /^Q\#(\d+):\s+(.*)/ ) {
+	$originalLine = int($1);
+	$newLine = &map($originalLine);
+	$question = $2;
+	while (<fp>) {
+	    (/^\s*$/) && last;
+	    $question .= $_;
+	}
+	if (defined($orgLineList[$originalLine])) {
+	    printf(stderr "%s:%d: duplicate question number Q\#%d\n", 
+		   $src, $. -1, $originalLine);
+	} else {
+	    $orgLineList[$originalLine] = 1;
+	}
+	&addTOCEntryHTML ($newLine, $question);
+	$junk = sprintf("Q\#%s", $newLine);
+	if (length($junk) < 7) {
+	    $padding = "\t";
+	} else {
+	    $padding = "  ";
+	}
+	$question = sprintf("\t%s:%s%s\n", $junk, $padding, &fmt(2,$question));
+	&addTOCEntry ($question);
+    } elsif ( /^%RCS-ID%\S+\s+\S+\s+(\S+)\s+(\S+)\s(\S+)/ ) {
+	$version = $1;
+	$date = $2; 
+	$time = $3;
+    }
+} while (<fp>);
+close(fp);
+
+#
+# Second pass -- print out the results, doing mappings as necessary
+#
+
+$SectionNumber = 0;
+open (fp, $src) || die("couldn't open $src (2)");
+$in_header = 0;
+$in_body = 0;
+while(<fp>) {
+    if (/^%Header-start%\s*$/) {
+	$in_header = 1;
+	printf(outfp2 
+	       "Version: %s<br>\n" .
+	       "Last Modified: %s %s<br>\n" .
+	       "<hr>\n" .
+	       "<h2><A NAME=\"preamble\">Preamble</A></h2>\n" .
+	       "<pre>\n", $version, $date, $time);
+    } elsif (/^%Header-end%\s*$/) {
+	$in_header = 0;
+	printf(outfp2 "</pre>\n<hr><hr>\n");
+    } elsif (/^%FAQ-http-addr%(.*)%$/) {
+	$faq_http = $1;
+    } elsif (/^%FAQ-ftp-addr%(.*)%$/) {
+	$faq_ftp = $1;
+    } elsif (/^%FAQ-log-http-addr%(.*)%$/) {
+	$faqlog_http = $1;
+    } elsif (/^%FAQ-log-ftp-addr%(.*)%$/) {
+	$faqlog_ftp = $1;
+#    } elsif (/%Version%\s*$/) {
+#	printf(outfp "Version:\t%s\n", $version);
+#    } elsif (/%Last-Modified%\s*$/) {
+#	printf(outfp "Modified:\t%s %s\n\n", $date, $time);
+    } elsif (/^%TOC%\s*$/) {
+	&printTOC();
+    } elsif (/^%Section%\s*(.+):\s*$/) {
+	# found a section header
+	$SectionNumber++;
+	&PrintSection($1);
+	$_ = <fp>;		# ditch the old underlining
+	$in_body = 1;
+    } elsif ($in_header || $in_body) {
+	s,\%Version\%,$version,;
+	s,\%Last\-Modified\%,$date $time,;
+	s,\%FAQ-FTP\%,$faq_ftp,;
+	s,\%FAQ-HTTP\%,$faq_http,;
+	s,\%LOG-FTP\%,$faqlog_ftp,;
+	s,\%LOG-HTTP\%,$faqlog_http,;
+	&PrintLine($_);
+    }
+}
+
+# print trailing info
+printf(outfp2 
+       "</pre><hr>\n" .
+       "%s\n" .
+       "<A HREF=\"mailto:%s\">&lt;%s&gt;</A>\n" .
+       "</body>\n" .
+       "</html>\n", $ContactName, $ContactEmail, $ContactEmail);
+
+# clean up
+close(fp);
+close(outfp);
+close(outfp2);
+
+#
+# Subroutines
+#
+
+sub map {
+    local ($old);
+    $old = @_[0];
+
+    if ($mappings[$old] == 0) {
+	$lastmapping++;
+	$mappings[$old] = sprintf("%d.%d", $SectionNumber, $lastmapping);
+    }
+    return $mappings[$old];
+}
+    
+sub addTOCEntry {
+    local($line, $first, $num, $num2, $last);
+
+    $line = $_[0];
+    $toc[$tocLines++] = $line;
+    $tocLines++;
+}
+
+sub addTOCEntryHTML {
+    local($line, $num, $entry);
+    local($first, $num2, $last);
+
+    $num  = $_[0];
+    $line = $_[1];
+    $line = &text2html($line);
+    $line =~ s/[\s\n]+/ /g;
+    $tag = $num;
+    $tag =~ s/\./_/g;
+    $entry = sprintf("<li><A HREF=\"\#q%s\">Q%s</A>: %s\n", $tag, $num, $line);
+    $htmlQuestion{$num} = "$line";
+    push(@htmlTOC, "$entry");
+    return 0;
+}
+
+sub addSection {
+    local ($underline, $len, $i);
+
+    &addTOCEntry ("\n\t" . @_[0] . "\n");
+    $underline = "\t";
+    $len = length(@_[0]);
+    for ($i = 0; $i < $len; $i++) {
+	$underline .= '^';
+    }
+    $underline .= "\n";
+    $lastmapping = 0;		# reset the question numbers for new section
+    &addTOCEntry ($underline);
+}
+
+sub addSectionHTML {
+    local ($entry, $arg, $tail);
+
+    $arg = $_[0];
+    $arg = &text2html($arg);
+    $MaxSections++;
+    $SectionNumber++;
+    $SectionNames[$SectionNumber] = $arg;
+
+    $tail = '';
+    ($SectionNumber > 1) && ($tail = "</ul>");
+    $entry = sprintf("%s\n" .
+		     "<h3><A HREF=\"\#s%d\">Section %d</A>: %s</h3>\n" .
+		     "<ul>\n", $tail, $SectionNumber, $SectionNumber, $arg);
+    push(@htmlTOC, "$entry");
+}
+
+
+sub printTOC {
+    local ($i, $l);
+
+    # print out the text TOC
+    printf (outfp
+	    "Table of Contents\n" .
+	    "=================\n");
+    for ($i=0; $i < $tocLines; $i++) {
+	printf (outfp   "%s", $toc[$i]);
+    }
+    printf(outfp "\n");
+
+    # print the html TOC
+    printf (outfp2 "<h2>Table of Contents</h2>\n");
+    print outfp2 @htmlTOC;
+    printf (outfp2 "</ul><br><hr>\n\n");	# finish off the last list
+}
+
+#
+# Print the section name.  For the text version, underline the name.
+# Takes one argument, the section name.
+#
+sub PrintSection {
+    local($sname, $len, $i);
+
+    $sname = @_[0];
+
+    # Do the text version
+    printf(outfp "%s\n", $sname);
+    $len = length($sname);
+    for ($i=0; $i<$len; $i++) {
+	printf (outfp "-");
+    }
+    printf(outfp "\n");
+
+    # Do the html version
+    $sname = &text2html($sname);
+    ($SectionNumber > 1) && printf(outfp2 "</pre>\n");
+    printf(outfp2
+	   "\n<hr>\n\n" .
+	   "<h2><A NAME=\"s%d\">Section %d:  %s</A></h2>\n\n", 
+	   $SectionNumber, $SectionNumber, $sname);
+}
+
+#
+# Print a line that's in the header or body.  Takes one argument, the
+# raw line.
+#
+sub PrintLine {
+    local($line, $rest);
+
+    $line = @_[0];
+    
+    # do a concheck and print out the text version
+    $qora = '';
+    if ($line =~ /^([QA])\#\d+:(.*)/) {
+	$qora = $1;
+	$rest = $2;
+	($rest =~ /^\t/) || 
+	    printf(stderr "%s:%d: missing leading tab\n", $src, $. -1);
+    }
+    $line =~ s/([QA])\#(\d+)/"$1#".&map($2)/ge;
+    printf (outfp "%s", $line);
+    if ($qora eq 'Q') {
+	do {
+	    $line = <fp>;
+	    $line =~ s/([QA])\#(\d+)/"$1#".&map($2)/ge;
+	    printf (outfp "%s", $line);
+	} until ($line =~ /^\s*$/);
+    }
+
+    # do the html version
+    $line = &text2html(@_[0]);
+    if ($line =~ /^([QA])\#(\d+):(.*)/) {
+	# start of a question or answer
+	$qora = $1;
+	$num  = $2;
+	$rest = $3;
+	if ($qora eq 'Q') {
+	    printf(outfp2 
+		   "</pre><h3><A NAME=\"q%s\">Q\#%s</A>: %s</h3>\n<pre>\n", 
+		   &mapnum(&map($num)), &map($num), $htmlQuestion{&map($num)})
+	} else {
+	    $rest =~ s,Q\#(\d+),
+	    '<A HREF="#q'.&mapnum(&map($1)).'">Q#'.&map($1).'</A>',ge;
+	    $rest =~ s/^\t//;
+	    printf(outfp2 "%s\n", $rest);
+	}
+    } else {
+	$line =~ s,Q\#(\d+),'<A HREF="#q'.&mapnum(&map($1)).'">Q#'.&map($1).
+	    '</A>',ge;
+	$line =~ s/^\t//;
+
+	# replace http:// and ftp:// with the link equivalents
+	$line =~ s,(http|ftp)://(\S+),'<A HREF="'.$1.'://'.$2.'">'.$1.'://'.$2.'</A>',ge;
+
+#	$line =~ s,ftp://(\S+),'<A HREF="ftp://'.$1.'">http://'.$1.'</A>',ge;
+	printf (outfp2 "%s", $line);
+    }
+
+}
+
+sub mapnum {
+    local($num);
+
+    $num = @_[0];
+    $num =~ s/\./_/g;
+    return $num
+}
+
+#
+# &fmt (tabs, text)
+#
+# This routine formats the specified text to fall within 76 columns,
+# and indents the text with the specified number of tabs (considered
+# to be 8 characters wide).
+#
+# The first line will _not_ be preceeded by any tabs, even though
+# the length will be calculated as if it is.
+#
+sub fmt {
+    local (@array, $tabs, $line, $columns, $result, $tablen, $linelen);
+    local ($word, $len, $i);
+    $tabs = int(@_[0]);
+    $line = @_[1];
+    $columns = 76;		# maximum column number to print
+    $tablen  = 8;		# spaces per tab
+
+    $line =~ s/\s+/ /g;
+
+    @array = split ("[ \t]+", $line);
+    $result = '';
+    $linelen = 0;
+    for ($i = 0; $i < $tabs; $i++) {
+	$linelen += $tablen;
+    }
+    foreach $word (@array) {
+	$len = length($word);
+	if ($columns - $linelen > $len) {
+	    # add it into the current line
+	    if ($linelen == $tablen * $tabs) {
+		$result .= $word;
+		$linelen += $len;
+	    } else {
+		$result .= ' ' . $word;
+		$linelen += $len + 1;
+	    }
+	} else {
+	    # start a new line
+	    $result .= "\n";
+	    $linelen = 0;
+	    for ($i = 0; $i < $tabs; $i++) {
+		$result .= "\t";
+		$linelen += $tablen;
+	    }
+	    $result .= $word;
+	    $linelen += $len;
+	}
+    }
+    return $result;
+}
+
+#
+# Translates HTML special character sequences into their "escaped" formats
+#
+sub text2html {
+    local($line);
+
+    $line = @_[0];
+
+    $line =~ s/</&lt;/g;
+    $line =~ s/>/&gt;/g;
+    $line =~ s/"/&quot;/g;
+    return $line;
+}
