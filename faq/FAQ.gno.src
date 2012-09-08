@@ -128,37 +128,41 @@ A#108:	GNO was developed by Procyon Enterprises (Jawaid Bazyar, prop.).
 
 Q#104:	What is the current version of GNO?
 
-A#104:	The currently released version is v2.0.4.  The version currently
-	under development is v2.0.6.  v2.0.5 never had a general release,
+A#104:	The last version released by Procyon was v2.0.4.  The current
+	release is v2.0.6.  Version 2.0.5 never had a general release,
 	and is not available.
 
+	Note that as of v2.0.6, there may be interim releases between
+	official version changes.  These releases are always marked with
+	the build date.
+
+	
+****
 	For those programmers using ORCA/C v2.1.x, there was a update made
 	available (for both GNO v2.0.4 and GNO v2.0.6 users) on 22 Dec 97.
 	It consists of updated headers, libraries, and manual pages.  It
 	is available at the following site:
 
-		ftp://ftp.gno.org/pub/apple2/gs.specific/gno/base206
+		ftp://ftp.gno.org/pub/apple2/gs.specific/gno/base
 
 Q#103:	What are GNO's minimum system requirements?
 
-A#103:	The GNO documentation specifies that the minimum requirement
-	is an Apple IIGS with 1.25 MB of memory and a 3.5" disk drive.
-	Realistically (especially with all the third-party add-ons),
-	a hard drive (or other large mass storage device) should be
-	considered a necessity.  An accelerator and additional memory
-	is recommended.
-
-	There is not an official "minimum disk space" requirement
-	as yet.  When this information becomes available, it will
-	be added to this FAQ.
+A#103:	See the GNO Overview and Installation manual at
+		http://www.gno.org/~gno/intro.html
+	Especially take note of the sections on "Hardware Requirements"
+	and "Planning Your System".
 
 Q#102:	Where can I get GNO?
 
 A#102:	The base GNO distribution may be obtained via anonymous ftp
-	from the following sites.  See also Q#107:
+	from the following site.  See also Q#107:
 
-		ftp://ftp.gno.org/pub/apple2/gs.specific/gno/base204
-		ftp://ftp.hypermall.com/pub/gno
+		ftp://ftp.gno.org/pub/apple2/gs.specific/gno/base
+
+	Ensure you read the GNO Overview and Installation Manual at
+		http://www.gno.org/~gno/intro.html
+
+**** current docs ****
 
 	The documentation for GNO v2.0.4 is now available via ftp and
 	http at the following sites.  MS-Word versions are also available
@@ -386,7 +390,7 @@ A#206:	Including the following documentation components will not only
 	  on the file name.  (For example, if you wrote the "foo" program,
 	  you should have a text file "foo.desc" containing the database
 	  entry.)  If you have WWW access, please update the online
-	  describe database maintained by Soenke Behrens -- see Q#304.
+	  describe database -- see Q#304.
 
 	  The describe entry is very suitable as a brief README file
 	  when uploading your program to ftp sites, or when posting to
@@ -536,11 +540,16 @@ A#304:	The best way to find out what programs are available for GNO,
 	to use the describe(1) database.  The program, database, and
 	maintenance utilities are available at the usual ftp sites.
 
-	Soenke Behrens <sbehrens@bigfoot.com> also maintains an online
-	describe database.  This tends to be the most up-to-date version,
-	and is available at
+	There is also an online describe database, originally compiled
+	by Soenke Behrens <sbehrens@bigfoot.com>.  This tends to be the
+	most up-to-date version, and is available at
 
-		http://www.arrowweb.com/sbehrens/describe.htm
+		http://www.gno.org/~gno/describe
+
+	Les Barstow also maintains an online version of the database which
+	sorts the entries by category.  It is available at
+
+		http://www.servtech.com/~phoenix/computers/gno
 
 Q#305:	Which editor should I use?
 
