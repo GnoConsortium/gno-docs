@@ -1,0 +1,464 @@
+{\rtf1\ansi\ansicpg1252\uc1 \deff0\deflang1033\deflangfe1033{\fonttbl{\f0\froman\fcharset0\fprq2{\*\panose 02020603050405020304}Times New Roman;}{\f4\froman\fcharset0\fprq2{\*\panose 00000000000000000000}Times;}{\f6\fmodern\fcharset0\fprq1{\*\panose 00000000000000000000}Courier;}{\f7\fswiss\fcharset0\fprq2{\*\panose 00000000000000000000}Geneva{\*\falt Arial};}{\f12\froman\fcharset0\fprq2{\*\panose 00000000000000000000}New York{\*\falt Times New Roman};}}{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0;\red128\green128\blue128;\red192\green192\blue192;}{\stylesheet{\nowidctlpar\widctlpar\adjustright \f12\cgrid \snext0 Normal;}{\*\cs10 \additive Default Paragraph Font;}{\s15\nowidctlpar\widctlpar\tqc\tx4320\tqr\tx8640\adjustright \f12\cgrid \sbasedon0 \snext15 footer;}{\s16\nowidctlpar\widctlpar\tqc\tx4320\tqr\tx8640\adjustright \f12\cgrid \sbasedon0 \snext16 header;}{\*\cs17 \additive \sbasedon10 page number;}}{\info{\title GNO/ME Version 2}{\author Lisa K Holsberg}{\operator Lisa K Holsberg}{\creatim\yr1997\mo8\dy27\hr16\min6}{\revtim\yr1997\mo8\dy27\hr16\min6}{\printim\yr1996\mo8\dy7\hr23\min24}{\version2}{\edmins0}{\nofpages15}{\nofwords3894}{\nofchars22196}{\*\company Promethean Enterprises}{\nofcharsws27258}{\vern71}}\margl1080\margr1080\margb720 \facingp\widowctrl\ftnbj\aenddoc\hyphhotz0\margmirror\sprstsp\otblrul\brkfrm\sprstsm\truncex\nolead\msmcap\lytprtmet\hyphcaps0\viewkind1\viewscale83\viewzk2\pgbrdrhead\pgbrdrfoot \fet0\sectd \psz1\sbknone\pgnrestart\pgnlcrm\linex0\endnhere\titlepg\sectdefaultcl {\footerl \pard\plain \s15\nowidctlpar\widctlpar\tqc\tx4320\tqr\tx8640\pvpara\phmrg\posxo\posy0\adjustright \f12\cgrid {\field{\*\fldinst {\cs17\b PAGE  }}{\fldrslt {\cs17\b\lang1024 iv}}}{\cs17\b 
+\par }\pard \s15\fi360\ri360\nowidctlpar\widctlpar\tqc\tx4320\tqr\tx8640\adjustright {\b 
+\par }}{\footerr \pard\plain \s15\nowidctlpar\widctlpar\tqc\tx4320\tqr\tx8640\pvpara\phmrg\posxo\posy0\adjustright \f12\cgrid {\field{\*\fldinst {\cs17\b PAGE  }}{\fldrslt {\cs17\b\lang1024 iii}}}{\cs17 
+\par }\pard \s15\fi360\ri360\nowidctlpar\widctlpar\tqc\tx4320\tqr\tx8640\adjustright {
+\par }}{\*\pnseclvl1\pnucrm\pnstart1\pnindent720\pnhang{\pntxta .}}{\*\pnseclvl2\pnucltr\pnstart1\pnindent720\pnhang{\pntxta .}}{\*\pnseclvl3\pndec\pnstart1\pnindent720\pnhang{\pntxta .}}{\*\pnseclvl4\pnlcltr\pnstart1\pnindent720\pnhang{\pntxta )}}{\*\pnseclvl5\pndec\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl6\pnlcltr\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl7\pnlcrm\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl8\pnlcltr\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl9\pnlcrm\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}\pard\plain \qj\nowidctlpar\widctlpar\adjustright \f12\cgrid {
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par }{\f4\fs72 GNO/ME Version 2.0}{\fs48 
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\f4\fs36 By Jawaid Bazyar and Tim Meekins
+\par }{
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\f4 \page 
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\f4 
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\f4 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par The GNO Multitasking Environment is Copyright 1991-199}{\f4 6}{\f4  by Procyon Enterprises Incorporated}{\f4 
+\par 
+\par Documentation, second edition, August 1996.}{\f4 
+\par 
+\par The ORCA/C run-time libraries are Copyright 1987-1993 Byte Works, Inc.
+\par and distributed with permission.
+\par 
+\par This product includes software developed by the University of California, Berkeley and its contributors.
+\par 
+\par GNO/ME 2.0 also includes several utilities and libraries produced by outside authors and in the public domain.  This software is included solely as a convenience to users of GNO/ME, and is not considered part of GNO/ME for copyright purposes.
+\par 
+\par 
+\par GNO and GNO/ME are trademarks of Procyon Enterprises Incorporated.
+\par Apple IIGS, APW, Finder, GS/OS, ProDOS, Macintosh, and HFS are registered trademarks of Apple Computer, Inc.
+\par AppleWorks GS is a trademark of Claris Corp.
+\par UNIX is a registered trademark of AT&T Bell Laboratories.
+\par }{\b\f4 
+\par Important Notice}{\f4 : This is a fully copyrighted work and as such is protected under the copyright laws of the United States of America.  According to these laws, consumers of copywritten material may make copies for their personal use only.  Duplication for any other purpose whatsoever would constitute infringement of copyright laws and the offender would be liable to civil damages of up to $50,000 in addition to actual damages, plus criminal penalties of up to one year imprisonment and/or a $10,000 fine.
+\par 
+\par Procyon Enterprises Inc. MAKES NO WARRANTIES, EITHER EXPRESS OR IMPLIED, REGARDING THE ENCLOSED COMPUTER SOFTWARE PACKAGE, ITS MERCHANTABILITY OR ITS FITNESS FOR ANY PARTICULAR PURPOSE. THE EXCLUSION OF IMPLIED WARRANTIES IS NOT PERMITTED IN SOME STATES. THE ABOVE EXCLUSION MAY NOT APPLY TO YOU. THIS WARRANTY PROVIDES YOU WITH SPECIFIC LEGAL RIGHTS. THERE MAY BE OTHER RIGHTS THAT YOU MAY HAVE WHICH VARY FROM STATE TO STATE.
+\par 
+\par This product is sold for use on a }{\i\f4 single computer}{\f4  at a }{\i\f4 single location}{\f4 . For information on obtaining a site license for using multiple copies, contact the publisher.
+\par 
+\par Procyon Enterprises, Inc.
+\par P.O. Box }{\f4 641}{\f4 
+\par }{\f4 Englewood}{\f4 , CO 801}{\f4 51-0641}{\f4  USA
+\par (303) 781-3273
+\par }{\f4\fs48 Credits}{\f4 
+\par 
+\par "Always listen to experts.  They'll tell you what can't be done, and why.  Then do it."
+\par Lazarus Long
+\par 
+\par The }{\b\f4 GNO}{\f4  }{\b\f4 M}{\f4 ultitasking }{\b\f4 E}{\f4 nvironment for the Apple IIgs 
+\par Copyright 1991-1993, Procyon Enterprises Inc. and Tim Meekins
+\par 
+\par 
+\par Please direct all inquiries to:
+\par }\pard \qj\li720\nowidctlpar\widctlpar\adjustright {\b\f4 Procyon, Inc.
+\par }\pard \qj\li720\nowidctlpar\widctlpar\adjustright {\b\f4 PO Box 641}{\b\f4 
+\par }{\b\f4 Englewood}{\b\f4 , CO 801}{\b\f4 51-0641}{\b\f4  USA
+\par (303) 781-3273
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\f4 
+\par For on-line technical assistance, contact:
+\par \tab America OnLine\tab : }{\f6 GNOJawaid, GNOTim2}{\f4 
+\par \tab GEnie\tab \tab \tab : }{\f6 Procyon.Inc}{\f4 
+\par \tab Internet\tab \tab : }{\f6 bazyar@hypermall.com}{\f6 
+\par }{\f4 \tab Delphi\tab \tab \tab : }{\f6 JAWAIDB}{\f4 
+\par 
+\par Written by:
+\par }\pard \qj\nowidctlpar\widctlpar\tx720\tx2880\adjustright {\f4 \tab }{\b\f4 Jawaid Bazyar}{\f4 \tab Kernel & Documentation
+\par \tab }{\b\f4 Tim Meekins}{\f4 \tab Shell & Documentation
+\par \tab }{\b\f4 Albert Chin}{\f4 \tab Documentation
+\par \tab }{\b\f4 Andrew Roughan\tab }{\f4 Documentation
+\par \tab }{\b\f4 Derek Taubert}{\f4 \tab Kernel support and utilities
+\par \tab }{\b\f4 Greg Thompson, Philip Vandry}{\f4 ,
+\par \tab }{\b\f4 James Brookes}{\f4 , }{\b\f4 Ian Schmidt}{\f4 \tab 
+\par \tab \tab Utilities
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\f4 
+\par With many thanks to:
+\par }\pard \qj\fi-2160\li2880\nowidctlpar\widctlpar\adjustright {\f4 Bill Gulstad, Rob Knauerhase, and everyone on the GNOBETA Internet mailing list
+\par Dave Lyons, for tolerating my endless questions since the beginning of time, for getting me started in IIgs programming, and for calling GNO 'cool'.
+\par Mike Westerfield, for your technical assistance and all your work in making great development tools for the IIgs.
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\f4 
+\par Special thanks to:
+\par }\pard \qj\fi-2160\li2880\nowidctlpar\widctlpar\adjustright {\f4 Matt Deatherage, for egging me on to complete the project; also, for your most helpful technical support through DEVSUPPORT- you guys made this thing possible!
+\par Randy Hyde, for telling me it couldn't be done.
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\f4\fs48 \page M}{\f4\fs48 iscellaneous}{\f4\fs48 
+\par }{\f4 
+\par }{\b\f4 Reporting Bugs
+\par }{\f4 
+\par In any large piece of computer software such as the GNO/ME system, bugs are sure to turn up, no matter how much testing is performed on the software before it goes out the door.  If you discover a bug in GNO/ME, we'd like to hear about it.  There are several things we require, however, to make bug reports useful to us.
+\par 
+\par First of all, we need a complete description of your computer system; how much RAM, what cards, in what slots, what type of disk storage, etc.  This information is very important in tracking down hardware-dependent bugs.  Also, we need to know the version numbers of the software involved; the GNO Kernel, the GNO Shell, and any utilities.
+\par 
+\par Second, we need a step-by-step description of how to duplicate the bug.  If this requires writing down individual keystrokes, then we need it.  Only in this way can we decide whether the bug is hardware dependent or global.
+\par 
+\par You can send bug reports to any of the electronic mail addresses listed on the 'Credits' page, or by mailing a disk containing a description of the problem and the necessary software and files to the Procyon address.
+\par 
+\par 
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\b\f4 User Projects}{\f4 
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\f4 
+\par If you're working on a project which utilizes GNO/ME in some way, we'd like to know about it.  Just contact us by mail, phone, or whatever}{\f4  i}{\f4 s most convenient for you, and tell us about your project.  If possible, we'll coordinate your efforts with those of other programmers.  If we really like your project and think it may be useful to others, we may include it on the next GNO/ME distribution!
+\par 
+\par 
+\par }{\b\f4 Software Piracy}{\f4 
+\par 
+\par If you copied GNO/ME from someone and are now reading this, take a moment to reflect on what you've done. GNO/ME is a project that has consumed around three man-years of effort, huge amounts of money, and a lot of grief on our part.  The kernel alone consists of over 18,000 lines of source code; the shell and utilities make up another twenty to thirty thousand lines.
+\par 
+\par Is it right that you're now benefiting from our effort without any just compensation to the authors and Procyon, Inc.?  We are Apple II programmers born, bred and raised in the spirit of the machine; we love to program it, and probably always will.  But if we cannot make enough money to make it worthwhile to continue work on GNO/ME, then we won't; because by worthwhile, we mean not only food on the table, but resources for expansion;  expansion of our IIgs product line and support to IIgs owners being abandoned by the rest of the industry.  In short, support us and we'll support you.
+\par 
+\par GNO/ME is very inexpensive when you consider what it allows you to do, and what it will allow you to do when software development for GNO/ME starts full-swing.  And it's a small price to pay indeed for our loyalty to you, the IIgs owner.
+\par 
+\par To all you GNO/ME purchasers out there: thank you very much.  We will continue to provide you with new IIgs products until our hair and teeth fall out, and our fingers are too frail to type the keys (and even then, with Easy Access, we might crank out a program or two).  We hope you will be sufficiently impressed with the system to recommend it to others.
+\par 
+\par 
+\par p.s. Remember - if someone comes up to you on the street and offers you some IBM, }{\b\f4 Just Say GNO!
+\par }{\page }{\f4\fs48 P}{\f4\fs48 reface}{\f4 
+\par 
+\par Computers are tools. The flexibility of a tool determines how useful it is. Early computers were much like the one this software was written for: the Apple IIgs. They could only run one program at a time, and their usefulness was limited to what the particular program the user was executing offered. In the late 1960's, a team of researchers at AT&T began developing the UNIX operating system. The UNIX design was partially based on the premise that most programs are I/O bound, that is, most of the time the program executes is spent waiting for user input or other I/O operations. While one program is waiting for I/O, why not allow another program to execute? This is what they did, and the result was one of the most successful computer operating systems ever created.
+\par 
+\par The Apple IIgs, like the Macintosh it is modelled after, provides very limited multitasking abilities in the form of desk accessories (NDAs). The programs in the NDA menu are available in whatever application you use as long as it follows Apple's guidelines. However, there are many graphics based programs that don't support NDAs, and in addition there is a wealth of software that has been developed for the Byte Works' ORCA environment. This environment is mainly text-based, and thus makes access to NDAs impossible. As if that wasn't enough, it's very difficult to write an NDA to allow the application to keep running concurrently. So the benefits are lost, and we're back at ground zero.
+\par 
+\par Enter the GNO Multitasking Environment. What was once just dreamed about is now a reality. GNO/ME provides an environment that is almost entirely compatible with software developed for the ORCA environment. But GNO/ME also provides a wealth of new abilities, lots of new ground for developers and users alike.
+\par 
+\par Before we begin describing, we'd like to respond to those who say such a multitasking system isn't possible on the Apple IIgs. Obviously it is: you hold it in your hands. Some say the Apple IIgs isn't powerful enough to make multitasking useful.  We point out that the Apple IIgs is much more powerful than the first computers UNIX was designed to run on; they only had 64K of real memory, and were 16 bit machines. Some ask why you'd ever need to run more than one program at once. These are the same people who asked why we'd ever need more than 64K of memory, or more than 140K of storage on disks (end soapbox).
+\par }{\page }{\f4\fs48 Introduction}{
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {
+\par }{\f4 The GNO Multitasking Environment provides pre-emptive multitasking. Many programs can be executing at the same time; each is called a 'process'. Each process is allowed to run for a short period of time (1/20th of a second on average). When its time runs out, the current process is set aside and another one chosen to run next. This cycle continues until there are no more processes left (i.e. when you exit GNO/ME). Starting up processes to run 'in the background' is a simple matter of adding a few characters to the shell commands.
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\f4 
+\par GNO/ME provides a shell that takes full advantage of the multitasking ability provided. The most important feature of the shell is job control (starting, terminating, and suspending processes). But the shell also provides power never before seen on the Apple IIgs. The ability to choose files by 'wildcard' has been around for a while, but the GNO Shell takes this to a new level with 'regular expressions', a very powerful yet simple programming language. Other benefits of the GNO shell are too numerous to mention. (see the }{\i\f4 GNO Shell User's Manual }{\f4 for details).
+\par 
+\par In addition to being compatible with the ORCA system, GNO/ME is a very powerful programming environment.  Available to the programmer are all the calls needed to control processes, support Inter-Process Communication, and other tools needed in a multitasking environment. 
+\par 
+\par GNO/ME also boasts the first completely consistent method for accessing serial and console I/O. The IIgs TextTools have been incredibly enhanced to provide a truly all-encompassing interface for serial, console, and IPC applications. Imagine being able to attach terminals to your GS, and have a useful shell in each one. Multiuser BBSs, remote dial-ups, UUCP or SLIP that doesn't take over your computer- the applications are endless!
+\par 
+\par With all this talk of shell utilities, have desktop users (users of programs like AppleWorks GS) been left behind? Absolutely not. GNO/ME doesn't allow more than one desktop program to run concurrently, but it DOES let you run a desktop program with as many text applications as you like. In other words, no functionality is lost from the IIgs by using GNO/ME.
+\par 
+\par Finally, the GNO Multitasking Environment comes with a large number of free utilities that bring some of the power of a UNIX system to the Apple IIgs. Also, a number of programming libraries are included that make it easy to port programs from UNIX or MS-DOS systems to the Apple IIgs.
+\par 
+\par 
+\par \page }{\f4\fs48 The GNO/ME package}{\f4 
+\par 
+\par Included in your GNO/ME Version 2.0 package are:
+\par \tab this GNO/ME overview 
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\f4 \tab the GNO Shell User's Manual
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\f4 \tab the GNO Kernel Reference Manual
+\par \tab a selection of utility and library documentation
+\par \tab a reading list containing a wide selection of books for both the user and the programmer
+\par \tab three disks containing the GNO Kernel, GNO Shell, and loads of utilities
+\par 
+\par 
+\par }{\f4\fs48 Hardware Requirements}{\b\f4 
+\par }{\f4 
+\par GNO/ME will work on any Apple IIgs with at least 2 MegaBytes of memory and a hard drive.
+\par You should have at least 5 MegaBytes of hard disk space free.
+\par 
+\par We recommend 4 MegaBytes of Memory and an accellerator card, especially if you will be using GNO with many background processes. A modem and access to an on-line service will greatly speed access to technical assistance and new utilities as they are made available.
+\par \page }{\f4\fs48 Installation}{\f4 
+\par 
+\par GNO/ME is a very large system.  Most of the system is stored on the three disks in a compressed format. For this reason we recommend that you read this section carefully and use the included automated installation program to save yourself the major headache of arranging everything. You'll need a hard drive partition with at least 5 Megabytes free to install GNO/ME. The entire installation process should take no longer than 10 minutes. 
+\par 
+\par If you are upgrading from GNO 1.0 to GNO 2.0, we recommend that you install GNO 2.0 on a new area of your hard drive. This is because GNO 2.0 provides new versions of almost all the utilities and other software provided with GNO 1.0. You can then move the parts of your old system that aren't a part of the standard GNO 2.0 distribution over to the new installation. 
+\par 
+\par The installer program is able to the copy the GNO libraries for use with the ORCA languages and tools. If you want to use your ORCA languages and tools, you should answer the appropriate questions during the install process. ORCA installation is covered in more detail below.
+\par }\pard \qj\nowidctlpar\widctlpar\tqr\tx10080\adjustright {\f4\ul \tab }{\f4 
+\par Step 1:
+\par }\pard \qj\li360\nowidctlpar\widctlpar\tqr\tx10080\adjustright {\f4 
+\par Copy the contents of /GNO.Disk1 to the partition where you want to install GNO/ME. The easiest way to do this is to run the IIGS Finder™ program, insert the }{\f6\fs20 /GNO.Disk1}{\f4  disk, and drag the }{\f6\fs20 /GNO.Disk1}{\f4  onto the icon of the drive you want to install on. The Finder will tell you that the disks are of a different size, and ask you if you wish to place the contents of }{\f6\fs20 /GNO.Disk1}{\f4  in a folder on the hard drive partition. Answer "Yes", and the Finder will copy the data.
+\par }\pard \qj\nowidctlpar\widctlpar\tqr\tx10080\adjustright {\f4\ul \tab }{\f4 
+\par Step 2:
+\par }\pard \qj\li360\nowidctlpar\widctlpar\tqr\tx10080\adjustright {\f4 
+\par Open the newly created }{\f6\fs20 GNO.Disk1}{\f4  folder on the partition and execute 'Kern' by double-clicking on the }{\f6\fs20 Kern}{\f4  icon.  }{\f4\fs20 GNO.Disk1}{\f4  contains a minimal GNO system which you have just started up. You'll see some copyright messages, and after a few seconds the desktop will appear.
+\par }\pard \qj\nowidctlpar\widctlpar\tqr\tx10080\adjustright {\f4\ul \tab }{\f4 
+\par Step 3:
+\par }\pard \qj\li360\nowidctlpar\widctlpar\tqr\tx10080\adjustright {\f4 
+\par Install will ask you questions before the installation process begins.  Questions asked by Install are boldfaced in the following discussion. If you're uncertain of how to answer, click on the 'Info' button to get more information on the question. This information is reproduced here for ease of reference.
+\par 
+\par }{\b\f4 Do you have existing Byteworks (ORCA) language products?}{\f4 
+\par If you use Byteworks language products such as ORCA/C, ORCA/M, ORCA/Pascal, etc. and wish to use them from GNO/ME then answer 'Yes' to this question. Otherwise, answer 'No'.
+\par 
+\par Clicking on the 'Info' button will display the following text:
+\par }\pard \qj\nowidctlpar\widctlpar\tqr\tx10080\adjustright {\f4 
+\par }\pard \qj\li720\nowidctlpar\widctlpar\tqr\tx10080\adjustright {\f7\fs20 If you currently use products such as ORCA/C, ORCA/Pascal, ORCA/M, etc., and wish to use them from GNO/ME then you should answer 'Yes' to this dialog.
+\par 
+\par Install will then ask you to locate the file "ORCA.SYS16" (the ORCA Shell). Usually, it will be in a directory called "ORCA" on one of your hard drive partitions. On our system, it is :software:orca. The location of this file determines where Install puts the GNO-specific ORCA/C header files and libraries (in the ORCA LIBRARIES directory).  If you have renamed ORCA.SYS16 to something else, select that instead.  
+\par }\pard \qj\li720\nowidctlpar\widctlpar\tqr\tx10080\adjustright {\f7\fs20 
+\par }\pard \qj\li720\nowidctlpar\widctlpar\tqr\tx10080\adjustright {\f7\fs20 Install uses this information to correctly set the ORCA prefixes and add the EXECUTABLES directory to the $PATH variable in your gshrc file.  See the GNO Shell User's Manual, Appendix B, for more information on the ORCA prefixes.
+\par }\pard \qj\nowidctlpar\widctlpar\tqr\tx10080\adjustright {\f4 
+\par }\pard \qj\li360\nowidctlpar\widctlpar\tqr\tx10080\adjustright {\b\f4 Do you want to install the modified ORCA/C 2.0 ORCALIB library?}{\f4 
+\par If you have ORCA/C 2.0 installed and you answered 'Yes' to the previous question, then you should answer 'Yes' now. If you have ORCA/C 1.3 installed, or you do not have any ORCA languages or tools, then you should answer 'No'.
+\par 
+\par Clicking 'Info' will display the following text:
+\par }\pard \qj\nowidctlpar\widctlpar\tqr\tx10080\adjustright {\f4 
+\par }\pard \qj\li720\nowidctlpar\widctlpar\tqr\tx10080\adjustright {\f7\fs20 GNO/ME 2.0 comes with a modified version of the ORCA/C ORCALIB standard library.  This library adds specific support for some of GNO's special files (pipes, terminals, etc) transparently and corrects other problems the standard ORCALIB has with GNO.
+\par 
+\par This special ORCALIB is only for use with ORCA/C 2.0.  It will NOT work with previous versions of ORCA/C.
+\par 
+\par Note that all of GNO's other libraries (libgno, libbsd, libc) work fine with ORCA/C 1.3.
+\par }\pard \qj\nowidctlpar\widctlpar\tqr\tx10080\adjustright {\f4 
+\par }\pard \qj\li360\nowidctlpar\widctlpar\tqr\tx10080\adjustright {\b\f4 Do you want to install the Multi-User package?}{\f4 
+\par If you wish to have the Multi User package installed, answer 'Yes'. It is recommended that new users do not install this package until they are familiar with the system. This package is not fully discussed in the GNO/ME manuals and may introduce many unfamiliar concepts.
+\par 
+\par Clicking 'Info' will display the following text:
+\par }\pard \qj\nowidctlpar\widctlpar\tqr\tx10080\adjustright {\f4 
+\par }\pard \qj\li720\nowidctlpar\widctlpar\tqr\tx10080\adjustright {\f7\fs20 The 'Multi-User' package consists of a number of cooperating programs, including init(8) and login(8).  MU provides for password-protected access to the GNO Shell via the console or serial ports (modems and dedicated terminals).  It also handles multiple user accounts, and a certain level of protection between users.  
+\par 
+\par If you will be using a terminal with GNO, or want to be able to dial into GNO with a modem, you should install MU.
+\par 
+\par You may wish to hold off setting up the Multi-User package until you learn your way around GNO a little better, as it's simple to set up MU later.
+\par }\pard \qj\nowidctlpar\widctlpar\tqr\tx10080\adjustright {\f4\ul \tab }{\f4 
+\par Step 4:
+\par }\pard \qj\li360\nowidctlpar\widctlpar\tqr\tx10080\adjustright {\f4 
+\par The Installer will now proceed to arrange the GNO Multitasking Environment on your hard drive. Initially, the contents of /GNO.Disk1 will be moved into the proper places on the volume you have chosen. When asked by the Installer, you should place /GNO.Disk2 and /GNO.Disk3 into the disk drive. The contents of these disks will be extracted and decompressed into their proper places.
+\par 
+\par If the installer cannot finish it's tasks for some reason, it will abort to the shell. At this point you should study the error messages to determine the cause of the failure, }{\f4 
+\par 
+\par }\pard \qj\nowidctlpar\widctlpar\tqr\tx10080\adjustright {\f4\ul 
+\par 
+\par 
+\par 
+\par }{\f4\ul \tab }{\f4 
+\par Step 5:
+\par 
+\par }\pard \qj\li360\nowidctlpar\widctlpar\tqr\tx10080\adjustright {\f4 When the Installer finishes, you will be returned to the GNO prompt. At this time you should type 'exit' to return to Finder and delete the }{\f6\fs20 GNO.Disk1}{\f4  directory, as it is no longer needed (GNO is completely installed in a subdirectory }{\f6 '}{\f6\fs20 GNO}{\f6 '}{\f4  on the same partition }{\f6\fs20 GNO.Disk1}{\f4  is on.}{\f4 
+\par }{\f4 
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\f4 That's all!
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\f4 
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\b\f4 
+\par }{\b\f4 What has been installed?
+\par }{\f4 
+\par If you examine the directory that you chose for GNO/ME, you will find that the Installer has created several directories. Here is a brief rundown of thier contents:
+\par 
+\par }\pard \qj\fi-2880\li2880\nowidctlpar\widctlpar\adjustright {\f4 :gno:bin:\tab This directory contains the executable shell utilities included with the GNO/ME package. 
+\par :gno:dev:\tab This directory contains device drivers. The GNO/ME package includes serial drivers for the II}{\f4\fs20 GS}{\f4 ' built-in modem and printer ports.
+\par :gno:etc:\tab Various system configuration files
+\par :gno:initrc\tab This a startup file for kern and must remain in this directory.
+\par :gno:kern\tab This is the GNO kernel. Launch this to start GNO/ME.
+\par :gno:lib:\tab This directory is provided for,,,, It is currently empty.
+\par :gno:tmp:\tab This directory is provided for,,,, It is currently empty.
+\par :gno:user:\tab This directory is created if you installed the Multi-User package. It contains a user directories for users of the system. Currently there is only one: 'root'. 
+\par :gno:usr:\tab This directory contains UNIX System Resources (USR).
+\par :gno:usr:bin:\tab Miscellaneous utilities
+\par :gno:usr:man:\tab This directory contains the manual pages for the 'man' utility. There are eight categories of information as defined by UNIX standards. These eight categories are presented in either formatted (man) or unformatted (cat) entries.
+\par :gno:usr:games:\tab The classic "Hunt the Wumpus" game, and perhaps others.
+\par :gno:usr:sbin:\tab System administration utilities.
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\f4 \page }{\f4\fs48 Desk Accessories}{\f4 
+\par 
+\par The following is a description of the desk accessories that are shipped with GNO/ME.
+\par 
+\par }{\b\f4 GSI NDA}{\f4 
+\par 
+\par The Graphical Shell Interface New Desk Accessory allows you to access the shell from a window inside a desktop application.  Selecting 'GSI' from the Apple menu opens a window and brings up a shell in it.  You can use the shell in this window just as you would in text mode.
+\par 
+\par At this time, GSI doesn't support any terminal emulations; i.e., it's a 'dumb' interface.  As a result, full screen programs like 'less' and 'vi' will not work properly in GSI.
+\par 
+\par }{\b\f4 Suspend NDA}{\f4 
+\par 
+\par The Suspend New Desk Accessory allows you to temporarily stop a desktop program and return to the text shell. To return to the desktop program, simply type '}{\b\f4 fg}{\f4 '.
+\par 
+\par You may put desktop programs in the background ('}{\b\f4 bg}{\f4 ') at your own risk. This is not guaranteed to work for all programs, and putting a desktop program in the background will not put the Apple IIgs in text mode.
+\par 
+\par Also, do not run another desktop program when one is currently suspended. The GNO kernel tries to cleanly terminate the second program, but may not always be able to accomplish this.
+\par 
+\par }{\b\f4 GNO Snooper CDA}{\f4 
+\par 
+\par The GNO Snooper CDA is a utility that is very helpful in debugging software, and reporting system crashes. Snooper has access to information inside the kernel that is not generally available to processes.
+\par 
+\par When you enter the control panel and choose "GNO Snooper" a process list is displayed, which is very similar to the 'ps' shell command, and a menu is presented with the following options:
+\par 
+\par D)etails
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\f4 Get detailed information on a process. Snooper asks you for the process ID number of the process you want to investigate.  Snooper then dumps the state of the 65816 registers and shows various other information about the process.
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\f4 
+\par K)ill
+\par This option sends a SIGKILL (signal number 9) to a process. Just type in the process ID of the process you want to kill.
+\par 
+\par P)rocess Group Dump
+\par Dumps the system process group tables, which is very useful for debugging code which manipulates process groups. The first table, 'pgrp', is the process group reference count table. This table lists how many processes (and TTYs) belong to that process group.  pgrp ID's start at 2, so the first pgrp listed is 2.
+\par 
+\par The second listing is the ttyStruct table.  This table shows which pgrp each TTY belongs to. The TTYs start with .null (0), then move on to .ttyb, .ttya, .ttyco, etc.
+\par 
+\par F)ile Table Dump
+\par Lists all open files that GNO knows about. The information is presented in tuples. The first element is the real GS/OS refNum or device driver ID. The second is the type of file (GSOS, ttyXX, or PIPE). The third is how many references to that file are open. This information is global, so if two processes have .NULL opened, the refcount for .tty00 will be 2.
+\par }\pard \qj\fi-2880\li2880\nowidctlpar\widctlpar\adjustright {\sect }\sectd \pgnrestart\pgnstarts14\pgnlcrm\linex0\cols2\endnhere\sectdefaultcl \pard\plain \qj\nowidctlpar\widctlpar\adjustright \f12\cgrid {\f4\fs48 Reading List}{
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\b\f4 
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\b\f4 
+\par Recommended Reading for Users}{\f4 
+\par 
+\par Title: Learning Unix
+\par Author: James Gardner
+\par Publisher: Sams
+\par Edition: 1991
+\par ISBN: 0-672-30001-X
+\par Comment: With disks containing MSDOS simulation of Unix (MKS Tools). A good tutorial / reference book for those without constant access to Unix.
+\par 
+\par Title: The Unix Operating System
+\par Author: Kaare Christian
+\par Publisher: Wiley
+\par Edition: 2nd ed. 1988
+\par ISBN: 0-471-84781-X
+\par Comment: A classic overview of Unix commands. Good in coverage.
+\par 
+\par Title: Peter Norton's Guide to Unix
+\par Authors: Peter Norton and Harley Hahn
+\par Publisher: Bantam Computer
+\par Edition: 1991
+\par ISBN: 0-553-35260-1
+\par Comment: Good coverage. A good introduction for beginners (especially those accustomed to DOS).
+\par 
+\par Title: Unix in a Nutshell
+\par Authors: Daniel Gilly and O'Reilly staff
+\par Publisher: O'Reilly
+\par Edition: 2nd ed. 1992 (System V and Solaris 2)
+\par ISBN: 1-56592-001-5
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\f4 Comment: **** Highly Recommended **** An excellent desktop reference to almost all Unix commands "a complete reference containing all commands and options, plus generous descriptions and examples that put the commands in context." Also, an edition for 4.3. BSD.
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\f4 
+\par 
+\par 
+\par 
+\par }{\f4 
+\par Title: Life with Unix - A Guide for Everyone
+\par Authors: Don Libes and Sandy Ressler
+\par Publisher: Prentice Hall
+\par Edition: 1990
+\par ISBN: 0-13-536657-7
+\par Comment: **** Highly Recommended **** An everything-you-want-to-know-about-Unix book. It includes info you might not find elsewhere. "This book is the "other" book about Unix, a study in reading between the lines - which is very much what learning UNIX is like."
+\par 
+\par Title: Unix for the Impatient
+\par Authors: Paul Abrahams and Bruce Larson
+\par Publisher: Addison Wesley
+\par Edition: 1992
+\par ISBN: 0-201-55703-7
+\par Comment:  **** Highly Recommended **** A new, comprehensive, in-depth reference to Unix. "a handbook you can use both as a manual to learn UNIX and as a ready reference for fast answers to specific UNIX questions."
+\par 
+\par Title: Learning the vi Editor
+\par Author: Linda Lamb
+\par Publisher: O'Reilly
+\par Edition: 1990
+\par ISBN: 0-937175-67-6
+\par Comment: A very good guide to vi and ex commands.}{\f4  }{\f4 With a quick reference card.
+\par 
+\par Titles: vi Tutor and vi Reference
+\par }{\f4 Authors: Mich}{\f4 a}{\f4 e}{\f4 l Pierce and Robert Ware (Tut), Maarten Litmaati (Ref)
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\f4 Edition: 1.3 (Tut), 8 (Ref)
+\par Comment: These and other good vi stuff are obtainable by anonymous ftp from cs.uwp.edu (in pub/vi) ...
+\par }{
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par }{
+\par }{\b\f4 Recommended Reading for Programmers}{\f4 
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\f4 
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\f4 Title: The Design and Implementation of the 4.3 BSD Unix Operating System
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\f4 Authors: Samuel Leffler et al
+\par Publisher: Addison-Wesley
+\par Edition: 1990
+\par ISBN: 0-201-06196-1
+\par Comment: An authoritative description of the design of BSD Unix. "It covers the internal structure of the 4.3BSD system and the concepts, data structures, and algorithms used in imple}{\f4 menting the system facilities."}{\f4 
+\par 
+\par Title: The Unix Programming Environment
+\par Authors: Brian Kernighan and Rob Pike
+\par Publisher: Prentice-Hall
+\par Edition: 1984 
+\par ISBN: 0-13-937681-X
+\par Comment: A true classic on Unix programming.
+\par 
+\par Title: Advanced Programming in The Unix Environment
+\par Author: Richard Stevens
+\par Publisher: Addison-Wesley
+\par Edition: 1992
+\par ISBN: 0-201-56317-7
+\par Comment: **** Highly Recommended **** A going-to-be classic on how programs work under Unix. The source codes and errata list are obtainable by anonymous ftp from ftp.uu.net (in /published/books).
+\par 
+\par Title: Advanced Unix Programming
+\par Author: Marc Rochkind
+\par Publisher: Prentice Hall
+\par Edition: 1985
+\par ISBN: 0-13-011818-4
+\par Comment: A superb book covering all system calls in detail.
+\par 
+\par Title: Using C on the Unix System
+\par Author: David Curry
+\par Publisher: O'Reilly
+\par Edition: 1990
+\par ISBN: 0-937175-23-4
+\par Comment: This book is directed to (would-be) system programmers.
+\par 
+\par 
+\par }{\b\f4 Required Reading for Programmers}{\f4 
+\par 
+\par Title: The C Programming Language
+\par Authors: Brian Kernighan and Dennis Ritchie 
+\par Publisher: Prentice Hall
+\par Edition: 2nd ed. 1988
+\par ISBN: 0-13-110362-8
+\par Comment: The answers to the exercises can be found in  C Answer Book written by Tondo and Gimpel and published by Prentice Hall (ISBN: 0-13-109653-2).
+\par 
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\f4 
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\f4 All the books listed below are available from:
+\par Resource Central
+\par PO Box 11250
+\par Overland Park Kansas 66207
+\par (913) 469 6502
+\par 
+\par 
+\par Title: Apple IIgs ToolBox Reference.
+\par Volumes 1, 2 & 3
+\par Author: Apple Computer
+\par Publisher: Addison-Wesley
+\par 
+\par Title: Programmers Reference for System 6.0
+\par Author: Mike Westerfield
+\par Publisher: Byteworks, Inc
+\par 
+\par Title: Apple IIgs Firmware Reference
+\par Author: Apple Computer
+\par Publisher: Addison-Wesley
+\par 
+\par Title: GS/OS Reference
+\par Author: Apple Computer
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\f4 Publisher: Addison-Wesley}{
+\par }}
