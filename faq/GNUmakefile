@@ -22,3 +22,8 @@ include $(SRCROOT)/etc/rules.mk
 
 $(GEN_TEXT) $(GEN_HTML): $(FAQ_SRC) $(MKFAQ)
 	$(MKFAQ)
+	install -m0644 csa2g.FAQ.html $(GEN_HTML)
+	install -m0644 csa2g.FAQ.txt $(GEN_TEXT)
+
+clean::
+	/bin/rm -f csa2g.FAQ.html csa2g.FAQ.txt

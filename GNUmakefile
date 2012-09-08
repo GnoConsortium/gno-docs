@@ -3,13 +3,14 @@
 #
 SRCROOT		= .
 WEB_HOME_BASE	= 
-SUBPROJECTS	= refs refs.aug96 man
+SUBPROJECTS	= refs refs.aug96 man faq
 
 DYNAMIC_TARGETS	= $(WEB_HOME)/head.html \
 		  $(WEB_HOME)/tail.html \
 		  $(WEB_HOME)/index.html \
 		  $(WEB_HOME)/refs.html \
 		  $(WEB_HOME)/manindex.html \
+		  $(WEB_HOME)/faqindex.html \
 		  $(WEB_HOME)/oldnews.html
 
 STATIC_TARGETS	= 
