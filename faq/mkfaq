@@ -1,4 +1,4 @@
-#! /usr/bin/perl
+#! /usr/bin/perl -T
 
 #
 # This script is used for formatting the GNO FAQ.
