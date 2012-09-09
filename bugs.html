@@ -1,0 +1,83 @@
+<!--#include virtual="/gno2/head.html" -->
+<!-- ################################################### -->
+
+<h2>GNO Bug Reports</h2>
+
+<p>
+If you wish to report a defect or suggest an enhancement, please
+use the 
+<a href="https://bugzilla.gno.org">GNO Bugzilla</a>.
+</p>
+
+<p>
+Before you file a bug report, please ensure that it is actually
+a defect in GNO.  The bug tracker is <em>NOT</em> a general support
+mechanism, such as if you're having problems trying to figure out
+how to do a particular task.
+</p>
+
+<p>
+Second, having concluded that what you have is actually a bug (or
+enhancement request), please
+<a href="https://bugzilla.gno.org">search bugzilla</a>
+to ensure that it has not already been reported (or suggested).
+Note that <em>there is more than one product supported by
+<b>bugzilla.gno.org</b></em>.  Ensure that you are filing
+bugs under GNO itself and not one of the other products hosted
+by the GNO Consortium.
+</p>
+
+<p>
+Be aware that the GNO Bugzilla  uses self signed certificates.
+If you're getting warnings from your browser about the certificates,
+<a href="http://lists.gno.org/self-signed.html">help is available</a>
+(just note that the site name is for <b>https://bugzilla.gno.org</b>
+as opposed to <b>https://lists.gno.org</b>).
+</p>
+
+
+<h3>Writing an Effective Bug Report</h3>
+
+<p>
+For an excellent article on submitting bug or defect reports in
+general (that is, for any software product), please see Simon
+Tatham's
+<a href="http://www.chiark.greenend.org.uk/~sgtatham/bugs.html">
+How to Report Bugs Effectively</a>.
+</p>
+
+<p>
+For GNO in particular, please ensure that for bug reports you're
+reporting at least the following information:
+<ul>
+<li>A summary of the problem.</li>
+<li>A detailed description of the problem.</li>
+<li>Instructions on how to produce the problem.</li>
+<li>With which distribution did you observe the problem? If it is a released
+    version, report the GNO version (eg: v2.0.6).  If it is with something
+    that is based on current code you built from the source repository,
+    report the version as &quot;current&quot;</li>
+<li>Which component is affected?  The actual list is configured in
+    bugzilla, however it will be something like the following:
+	<ul>
+	<li>Documentation
+	<li>Utilities
+	<li>The GNO Shell
+	<li>The Kernel
+	<li>Libraries and Header Files
+	</ul>
+    </li>
+<li>If you are reporting a problem with a utility or library routine,
+	include the name of the utility (or routine).  If it's available,
+	also quote the version.  This is often given as an rVersion 
+	resource on programs and libraries.</li>
+<li>If your problem is with a library routine, give a <em>short</em>
+	program which exhibits the problem.</li>
+<li>You can attach supporting documents, source files, etc as attachments
+    in bugzilla.</li>
+</ul>
+</p>
+
+
+<!-- ################################################### -->
+<!--#include virtual="/gno2/tail.html" -->
